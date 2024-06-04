@@ -154,20 +154,20 @@ const commandHandler = async () => {
 const reloadPresence = async (client:discord.Client) => {
     const getExternalURL = await discord.RichPresence.getExternal(
         client,
-        "367827983903490050",
+        "",
         "",
         ""
     )
     const activity = new discord.RichPresence()
-        .setApplicationId("367827983903490050")
+        .setApplicationId("")
         .setType("PLAYING")
         .setName("I AM BOT")
-        .setDetails("")
+        .setDetails("ndndndn")
         .setStartTimestamp(client.readyAt!)
         .setAssetsLargeImage(getExternalURL[0].external_asset_path)
-        .setAssetsLargeText("")
+        .setAssetsLargeText("ndkdn")
         .setAssetsSmallImage(getExternalURL[1].external_asset_path)
-        .setAssetsSmallText("")
+        .setAssetsSmallText("ndndn")
         .addButton('Discord', "https://discord.gg/hYyk9gcJJR")
     client.user?.setActivity(activity.toJSON())
     client.user?.setStatus("idle")
